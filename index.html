@@ -1,13 +1,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
   <title>Visualização de Dados</title>
 </head>
 
@@ -20,50 +23,91 @@
       <h1>Professor: Yuri</h1>
     </div>
   </header>
-  <main>
-    <div class="mainDiv">
-      <h2>
-        Premier League
-      </h2>
+  <main class="funcionando">
+    <div>
+      <h2>Premier League</h2>
       <h3>
-        O dataset Status da Premier league são estatísticas coletadas do Opta (coletor de estatísticas oficiais da
-        Premier League) de cada equipe em cada temporada (totais da temporada) de 2006/2007 (ou seja, a temporada a
-        partir da qual a coleta dessas estatísticas detalhadas começou) a 2017/2018.
+        O dataset Status da Premier league são estatísticas coletadas do Opta
+        (coletor de estatísticas oficiais da Premier League) de cada equipe em
+        cada temporada (totais da temporada) de 2006/2007 até 2017/2018.
       </h3>
     </div>
-
-    <div class="mainDiv">
-      <h2>
-        Dados Usados
-      </h2>
-      <div class="divSpace">
-        <strong>Geral</strong>
-        <p>Colunas (1-5)</p>
-        <p>wins, losses</p>
+  </main>
+  <div class="funcionando">
+    <div>
+      <div style="margin-top: 50">
+        <h4>Gráfico 1</h4>
+        <p>Vemos no gráfico abaixo uma relação entre cruzamentos e a quantidade de gols, além de termos uma ideia de
+          como
+          esses times estão distribuídos por conta da legenda que nos diz os times que ganharam mais do que perderam.
+          Conseguimos ver que existe uma relação quase linear entre esses atributos, quanto mais cruzamentos, maior a
+          chance de realizar gols.</p>
+        <p>Sabemos que não necessariamente quanto maior o número de cruzamento, maior o número de gols, pois por
+          exemplo,
+          temos que o cruzamento pode não ser bom, o goleiro pode defender e a zaga pode interceptar.</p>
       </div>
-      <div class="divSpace">
-        <strong>Ataque</strong>
-        <p>Colunas (6-15)</p>
-        <p>clean sheets, goals conceded, saves, blocks, interceptions, tackles, last man tackles, clearances, headed
-          clearances, own goals, penalties conceded, goals conceded from penalty</p>
+      <iframe width="100%" height="318" frameborder="0"
+        src="https://observablehq.com/embed/@d695734e018aff49/projeto-final-fase-2?cells=viewResultCircle"></iframe>
+    </div>
+    <div>
+      <div style="margin-top: 50">
+        <h4>Gráfico 2</h4>
+        <p>Temos aqui um gráfico com a opção de escolha de times para visualizarmos algum time em específico e assim
+          conseguiremos ver com mais clareza esses atributos, que são a quantidade de chutes ao gol, e a quantidade de
+          gols em si.</p>
+        <p>É possível ver que temos um aumento na quantidade de gols, juntamente com o aumento de chutes ao gol, e como
+          foi dito acima, o goleiro pode interceptar ou a zaga.</p>
       </div>
-      <div class="divSpace">
-        <strong>Outros</strong>
-        <p>Colunas (35-42)</p>
-        <p>
-          touches, big chances missed, clearances off line, dispossessed, penalties saved, high claims, punches, season
-        </p>
+      <div>
+        <iframe width="100%" height="605" frameborder="0"
+          src="https://observablehq.com/embed/@d695734e018aff49/projeto-final-fase-2?cells=view2"></iframe>
       </div>
     </div>
     <div>
-      <iframe width="100%" height="505" frameborder="0"
-        src="https://observablehq.com/embed/7a13d2606915c2f4?cells=viewof+view">
-      </iframe>
+      <div style="margin-top: 50">
+        <h4>Gráfico 3</h4>
+        <p>Neste gráfico é possível ver como cada time se saiu de acordo com cada temporada e quantidade de gols, alguns
+          times temos uma melhora com o tempo, outros vemos que se mantêm e outros decaem.</p>
+        <p>Com o selection, acabou ficando tranquilo de visualizar ou seja, não está confuso.</p>
+      </div>
+      <div>
+        <iframe width="100%" height="604" frameborder="0"
+          src="https://observablehq.com/embed/@d695734e018aff49/projeto-final-fase-2?cells=view3"></iframe>
+      </div>
     </div>
-  </main>
-  <footer>
-    <h1>Projeto de visualização de dados</h1>
-  </footer>
+    <div>
+      <div style="margin-top: 50">
+        <h4>Gráfico 4</h4>
+        <p>Este gráfico mostra a relação entre as faltas e o total de cartões amarelos, é possível perceber que alguns
+          times possuem um alto número de cartões com o aumento de faltas e outros que possuem menos cartões mesmo com
+          muitas faltas.</p>
+        <p>É um gráfico que a princípio parece estar confuso, mas na realidade é fácil de perceber como está a situação
+          de cartões amarelos de acordo com o total de faltas e em diferentes temporadas.</p>
+        <p>Vemos que o Chelsea e Sunderland possuem muitos cartões amarelos em certas temporadas.</p>
+      </div>
+      <div>
+        <iframe width="100%" height="520" frameborder="0"
+          src="https://observablehq.com/embed/@dd6a2c0d330815a3/projeto-final-fase-2?cells=graph_view"></iframe>
+      </div>
+    </div>
+    <div>
+      <div style="margin-top: 50">
+        <h4>Gráfico 5</h4>
+        <p>Neste gráfico temos uma relação dos times e do total de cartões vermelhos, juntamente com um selection single
+          para não ficar confuso.</p>
+        <p>Para cada barra, um time em que as cores são cada temporada, o quanto cada temporada contribuiu em relação ao
+          total de cartões vermelhos, vemos que alguns times não participaram de todas as temporadas, o que resulta
+          nessas
+          colunas com poucas cores diferentes.</p>
+        <p>Percebemos facilmente que p Chelsea é o time com mais cartões vermelhos nessas temporadas.</p>
+      </div>
+      <div>
+        <iframe width="100%" height="445" frameborder="0"
+          src="https://observablehq.com/embed/@d695734e018aff49/projeto-final-fase-2?cells=view6"></iframe>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
